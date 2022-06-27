@@ -5,7 +5,6 @@ headers = {
 }
 #insert file to write in
 fhand = open('', 'w')
-ModLoc = dict()
 eolDevs = list()
 #insert file to read
 fil = open('', 'r')
@@ -22,8 +21,5 @@ for net in d:
                 print (dev['model'], dev['name'],file=fhand)
         except KeyError:
                 print (dev['model'], 'No name found' ,file=fhand)
-                
-for k in ModLoc.keys():
-    print (k, ModLoc[k], file=fhand)
 #fil.close()
 fhand.close()
